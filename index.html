@@ -102,7 +102,7 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2>Anirudh Edpuganti</h2>
-        <p>I'm <span class="typed" data-typed-items="Developer, Freelancer">Developer</span><span
+        <p>I'm <span class="typed" data-typed-items="Developer, Freelancer, Engineer">Developer</span><span
             class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span
             class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
       </div>
@@ -174,12 +174,12 @@
       }
 
       // Load the sections and initialize animations
-      loadSection('about-section', 'about.html');
-      loadSection('skills-section', 'skills.html', initializeSkillsAnimation);
-      loadSection('resume-section', 'resume.html');
-      loadSection('projects-section', 'projects.html');
-      loadSection('services-section', 'services.html');
-      loadSection('contact-section', 'contact.html');
+      loadSection('about-section', './pages/about.html');
+      loadSection('skills-section', './pages/skills.html', initializeSkillsAnimation);
+      loadSection('resume-section', './pages/resume.html');
+      loadSection('projects-section', './pages/projects.html');
+      loadSection('services-section', './pages/services.html');
+      loadSection('contact-section', './pages/contact.html');
 
       // Function to initialize progress bar animation
       function initializeSkillsAnimation() {
