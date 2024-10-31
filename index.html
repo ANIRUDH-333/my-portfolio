@@ -98,7 +98,7 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
+      <img src="assets/img/my-profile-img-ani.jpeg" alt="" data-aos="fade-in" class="">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2>Anirudh Edpuganti</h2>
@@ -153,48 +153,48 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
       // Function to load section content
       function loadSection(sectionId, fileName, callback) {
-          fetch(fileName)
-              .then(response => {
-                  if (!response.ok) {
-                      throw new Error('Network response was not ok ' + response.statusText);
-                  }
-                  return response.text();
-              })
-              .then(data => {
-                  document.getElementById(sectionId).innerHTML = data;
-                  if (callback) callback(); // Trigger callback after loading
-              })
-              .catch(error => {
-                  console.error('There was a problem with the fetch operation:', error);
-              });
+        fetch(fileName)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.text();
+          })
+          .then(data => {
+            document.getElementById(sectionId).innerHTML = data;
+            if (callback) callback(); // Trigger callback after loading
+          })
+          .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+          });
       }
 
       // Load the sections and initialize animations
       loadSection('about-section', 'about.html');
       loadSection('skills-section', 'skills.html', initializeSkillsAnimation);
       loadSection('resume-section', 'resume.html');
-        loadSection('projects-section', 'projects.html');
-        loadSection('services-section', 'services.html');
-        loadSection('contact-section', 'contact.html');
+      loadSection('projects-section', 'projects.html');
+      loadSection('services-section', 'services.html');
+      loadSection('contact-section', 'contact.html');
 
       // Function to initialize progress bar animation
       function initializeSkillsAnimation() {
-          const progressBars = document.querySelectorAll('#skills-section .progress-bar');
+        const progressBars = document.querySelectorAll('#skills-section .progress-bar');
 
-          progressBars.forEach(bar => {
-              const progressValue = bar.getAttribute('aria-valuenow');
-              if (progressValue) {
-                  bar.style.width = progressValue + '%'; // Set width to trigger animation
-                  bar.classList.add('aos-animate'); // Add animation class if using AOS or similar
-              }
-          });
+        progressBars.forEach(bar => {
+          const progressValue = bar.getAttribute('aria-valuenow');
+          if (progressValue) {
+            bar.style.width = progressValue + '%'; // Set width to trigger animation
+            bar.classList.add('aos-animate'); // Add animation class if using AOS or similar
+          }
+        });
       }
-  });
-</script>
+    });
+  </script>
 
 
 
